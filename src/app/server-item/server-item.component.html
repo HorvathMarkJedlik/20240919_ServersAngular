@@ -1,4 +1,15 @@
 <div class="server">
-  <h3>Szerver neve</h3>
-  <button>Kapcsol</button>
+  <div>
+      <h3>Szerver neve:</h3>
+      <p>{{ model.name }}</p>
+      {{model.switchedOn}}
+      <button>Kapcsol</button>
+  </div>
+  @if (model.switchedOn) {
+    <img src="./traffic-light-green-icon.svg" alt="">
+  }
+  @else{
+    <img src="./traffic-light-red-icon.svg" alt="">
+  }
+
 </div>

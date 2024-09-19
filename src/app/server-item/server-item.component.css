@@ -1,8 +1,27 @@
 div.server {
   width: 200px;
-  height: 100px;
+  /* height: 150px; */
   border: 1px solid #666;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #48aaff;
   text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+img{
+  height: 80px;
+}
+
+h3{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+button{
+  margin: 10px 0 0 0;
 }
