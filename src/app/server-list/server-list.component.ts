@@ -12,7 +12,7 @@ import { ServerModel } from "../server.model";
 export class ServerListComponent {
 
   serverList: ServerModel[] = [];
-  newServerName: String | undefined;
+  newServerName: String = "";
 
   constructor() {
     // for (let index = 0; index < 1; index++) {
@@ -25,7 +25,7 @@ export class ServerListComponent {
   }
 
   onAddServer() {
-    if (typeof this.newServerName != undefined) {
+    if (typeof this.newServerName != undefined && this.newServerName != "") {
       let server = new ServerModel();
       server.name = this.newServerName as string;
       // server.id = Math.random() * 1000000;

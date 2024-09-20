@@ -3,9 +3,8 @@
       <h3>Szerver neve:</h3>
       <p>{{ model.name }}</p>
       <p>ID: {{ model.id }}</p>
-      {{model.switchedOn}}
       <button (click)="onSwitchClick()" >Kapcsol</button>
-      <button (click)="onDeleteClick()" >Töröl</button>
+      <button class="delete" (click)="onDeleteClick()" >Töröl</button>
 
   </div>
   @if (model.switchedOn) {
