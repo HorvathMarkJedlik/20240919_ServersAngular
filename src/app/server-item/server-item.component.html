@@ -2,8 +2,9 @@
   <div>
       <h3>Szerver neve:</h3>
       <p>{{ model.name }}</p>
+      <p>ID: {{ model.id }}</p>
       {{model.switchedOn}}
-      <button>Kapcsol</button>
+      <button (click)="onSwitchClick()" >Kapcsol</button>
   </div>
   @if (model.switchedOn) {
     <img src="./traffic-light-green-icon.svg" alt="">

@@ -6,8 +6,14 @@ import { ServerModel } from '../server.model';
   standalone: true,
   imports: [],
   templateUrl: './server-item.component.html',
-  styleUrl: './server-item.component.css'
+  styleUrl: './server-item.component.css',
 })
 export class ServerItemComponent {
   @Input() model!: ServerModel;
+
+  onSwitchClick()
+  {
+    this.model.switchedOn = !this.model.switchedOn;
+  }
 }
+

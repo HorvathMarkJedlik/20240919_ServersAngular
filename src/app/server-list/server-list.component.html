@@ -1,5 +1,7 @@
 <h2>Szerverek listája</h2>
 
 <div class="server-list">
-  <app-server-item [model]="serverList[0]"></app-server-item>
+  @for (serverItem of serverList; track $index) {
+    <app-server-item [model]="serverItem"></app-server-item>
+  }
 </div>

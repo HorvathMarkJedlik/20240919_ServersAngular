@@ -13,11 +13,13 @@ export class ServerListComponent {
   serverList: ServerModel[] = [];
 
   constructor() {
-    let server = new ServerModel();
-    server.id = '001';
-    server.name = 'Server 001';
-    server.switchedOn = Math.random() > 0.5 ? true : false;
+    for (let index = 0; index < 12; index++) {
 
-    this.serverList.push(server);
+        let server = new ServerModel();
+        server.id = index;
+        server.name = 'Server 001';
+        server.switchedOn = Math.random() > 0.5 ? true : false;
+        this.serverList.push(server);
+    }
   }
 }
