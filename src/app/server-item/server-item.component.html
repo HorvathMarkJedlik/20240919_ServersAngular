@@ -5,6 +5,8 @@
       <p>ID: {{ model.id }}</p>
       {{model.switchedOn}}
       <button (click)="onSwitchClick()" >Kapcsol</button>
+      <button (click)="onDeleteClick()" >Töröl</button>
+
   </div>
   @if (model.switchedOn) {
     <img src="./traffic-light-green-icon.svg" alt="">

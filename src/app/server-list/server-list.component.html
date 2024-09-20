@@ -1,7 +1,14 @@
+<h2>Új szerver hozzáadása</h2>
+<div class="input" >
+  <label for="name">Szerver neve: </label>
+  <input type="text" id="name" (blur)="onNameInput($event)">
+  <button (click)="onAddServer()">Felvesz</button>
+</div>
+
 <h2>Szerverek listája</h2>
 
 <div class="server-list">
   @for (serverItem of serverList; track $index) {
-    <app-server-item [model]="serverItem"></app-server-item>
+    <app-server-item [model]="serverItem" (serverDelete)="onServerDelete($event)"></app-server-item>
   }
 </div>

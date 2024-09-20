@@ -1,5 +1,6 @@
 export class ServerModel {
-  id!: number;
+  static counter = 0;
+  id: number = ServerModel.counter++;
   name!: string;
   switchedOn: boolean = false;
 }

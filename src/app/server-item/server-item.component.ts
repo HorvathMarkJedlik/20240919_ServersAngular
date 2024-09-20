@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { ServerModel } from '../server.model';
 
 @Component({
@@ -10,10 +10,15 @@ import { ServerModel } from '../server.model';
 })
 export class ServerItemComponent {
   @Input() model!: ServerModel;
+  @Output() serverDelete = new EventEmitter();
 
   onSwitchClick()
   {
     this.model.switchedOn = !this.model.switchedOn;
+  }
+
+  onDeleteClick(){
+    this.serverDelete.emit(this.model.id);
   }
 }
 
